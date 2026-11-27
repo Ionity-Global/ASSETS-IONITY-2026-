@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Johan Wilhelm van Antwerp · Ionity</title>
+<meta name="description" content="Johan Wilhelm van Antwerp, AI &amp; IoT Solutionist &amp; Toolmaker at Ionity. Building Tomorrow, Today.">
+<meta name="author" content="Johan Wilhelm van Antwerp">
+<meta name="theme-color" content="#050a1e">
+<meta property="og:title" content="Johan Wilhelm van Antwerp · Ionity">
+<meta property="og:description" content="AI &amp; IoT Solutionist &amp; Toolmaker. Building Tomorrow, Today.">
+<meta property="og:image" content="https://ionity-global.github.io/ASSETS-IONITY-2026-/card/card.jpg">
+<meta property="og:type" content="profile">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#3a9eff;--cyan:#00c6ff;--ink:#050a1e;--navy:#0d1b2a}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:radial-gradient(120% 90% at 50% 0%,#0b1a5c 0%,#07103a 38%,var(--ink) 100%);color:#fff;
+  font-family:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden;-webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color:transparent}
+#sky{position:fixed;inset:0;width:100%;height:100%;display:block}
+#flash{position:fixed;inset:0;background:radial-gradient(60% 50% at var(--fx,50%) 0%,rgba(120,190,255,.55),transparent 70%);
+  opacity:0;pointer-events:none;mix-blend-mode:screen}
+main{position:relative;z-index:2;min-height:100%;height:100dvh;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:clamp(18px,3.4vh,34px);padding:max(18px,env(safe-area-inset-top)) 18px max(14px,env(safe-area-inset-bottom))}
+.stage{perspective:1100px;width:min(92vw,720px,calc((100dvh - 300px)*1.79));min-width:260px}
+.card{position:relative;aspect-ratio:2752/1536;border-radius:clamp(10px,2.2vw,18px);overflow:hidden;
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transform-style:preserve-3d;will-change:transform;
+  box-shadow:0 0 0 1px rgba(90,170,255,.35),0 18px 60px -12px rgba(0,60,255,.65),0 0 var(--glow,34px) rgba(0,150,255,var(--ga,.35));
+  animation:power 1.5s cubic-bezier(.2,.8,.2,1) both;transition:box-shadow .25s}
+.card img{display:block;width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+#bolt{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:screen;pointer-events:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent 29%,#000 36%);mask-image:linear-gradient(90deg,transparent 29%,#000 36%)}
+.glare{position:absolute;inset:-40%;pointer-events:none;mix-blend-mode:soft-light;
+  background:radial-gradient(35% 35% at var(--gx,50%) var(--gy,30%),rgba(255,255,255,.55),transparent 70%)}
+.sweep{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 42%,rgba(160,215,255,.22) 50%,transparent 58%);
+  background-size:300% 100%;animation:sweep 6.5s ease-in-out infinite}
+.info{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 26px;font-weight:300;font-size:clamp(15px,2.3vh,18px);
+  letter-spacing:.02em;animation:rise .9s .7s both}
+.info a{color:#dcebff;text-decoration:none;display:inline-flex;align-items:center;gap:9px;padding:6px 2px;border-bottom:1px solid transparent;transition:.2s}
+.info a:hover,.info a:focus-visible{color:#fff;border-color:var(--cyan);outline:none}
+.info svg{width:19px;height:19px;stroke:var(--cyan);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.cta{position:relative;display:inline-flex;align-items:center;gap:14px;padding:17px 44px 17px 48px;border-radius:999px;color:#fff;
+  text-decoration:none;font-weight:700;font-size:clamp(17px,2.6vh,21px);letter-spacing:.3em;text-transform:uppercase;
+  background:linear-gradient(135deg,#0a4dff 0%,#1f8fff 55%,#00c6ff 100%);
+  box-shadow:0 0 0 1px rgba(160,220,255,.5) inset,0 10px 40px -6px rgba(0,140,255,.85),0 0 60px -10px rgba(0,198,255,.8);
+  animation:rise .9s .95s both,breathe 2.8s 2s ease-in-out infinite;overflow:hidden;transition:transform .18s}
+.cta::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);
+  transform:translateX(-120%);animation:shine 3.4s 2.2s ease-in-out infinite}
+.cta:hover{transform:translateY(-2px) scale(1.03)}.cta:active{transform:scale(.97)}
+.cta:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.cta svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;position:relative;transition:transform .2s}
+.cta span{position:relative}.cta:hover svg{transform:translateX(5px)}
+.dest{font-size:12.5px;font-weight:300;letter-spacing:.22em;color:#8fb9ee;margin-top:-10px;animation:rise .9s 1.1s both}
+footer{font-size:11px;font-weight:300;letter-spacing:.06em;color:#7f9bc9;text-align:center;line-height:1.7;animation:rise .9s 1.25s both}
+footer b{display:block;font-weight:700;font-size:12.5px;letter-spacing:.24em;color:#fff;text-transform:uppercase}
+footer b i{font-style:normal;color:var(--blue)}
+@keyframes power{0%{opacity:0;transform:translateY(26px) scale(.94) rotateX(14deg);filter:brightness(3) saturate(0)}
+  18%{opacity:1;filter:brightness(2.2)}26%{opacity:.35}34%{opacity:1;filter:brightness(1.6)}42%{opacity:.7}
+  100%{opacity:1;transform:none;filter:none}}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes sweep{0%,55%{background-position:120% 0}100%{background-position:-60% 0}}
+@keyframes shine{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+@keyframes breathe{50%{box-shadow:0 0 0 1px rgba(200,235,255,.8) inset,0 12px 50px -4px rgba(0,150,255,1),0 0 90px -6px rgba(0,198,255,1)}}
+@media (max-height:520px){footer{display:none}.dest{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div id="flash" aria-hidden="true"></div>
+<main>
+  <div class="stage">
+    <div class="card" id="card">
+      <img src="card.jpg" width="1376" height="768" alt="Ionity business card: Johan Wilhelm van Antwerp, AI &amp; IoT Solutionist &amp; Toolmaker, Centurion, South Africa">
+      <canvas id="bolt" aria-hidden="true"></canvas>
+      <div class="sweep"></div><div class="glare"></div>
+    </div>
+  </div>
+  <div class="info">
+    <a href="tel:+27646999877"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>+27 646 999 877</a>
+    <a href="mailto:ai@ionity.today"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>ai@ionity.today</a>
+  </div>
+  <a class="cta" id="cta" href="https://www.ionity.co.za"><span>Connect</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="dest">IONITY.CO.ZA</div>
+  <footer><b>Building Tomorrow, <i>Today</i></b>&copy; 2018&ndash;2026 Antwerp Designs | Ionity (Pty) Ltd &middot; All rights reserved</footer>
+</main>
+<script>
+(()=>{
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const sky=document.getElementById('sky'),sx=sky.getContext('2d');
+const bc=document.getElementById('bolt'),bx=bc.getContext('2d');
+const card=document.getElementById('card'),flash=document.getElementById('flash');
+let W,H,D=Math.min(devicePixelRatio||1,2),nodes=[],bolts=[],cbolts=[];
+const R=(a,b)=>a+Math.random()*(b-a);
+function size(){
+  W=sky.width=innerWidth*D;H=sky.height=innerHeight*D;
+  const r=card.getBoundingClientRect();bc.width=r.width*D;bc.height=r.height*D;
+  const n=Math.round(Math.min(110,innerWidth*innerHeight/11000));
+  nodes=Array.from({length:n},()=>({x:R(0,W),y:R(0,H),vx:R(-.12,.12)*D,vy:R(-.12,.12)*D,r:R(.8,2.4)*D,p:R(0,6.28)}));
+}
+function path(x0,y0,x1,y1,disp,depth){
+  let p=[[x0,y0],[x1,y1]];
+  for(let i=0;i<depth;i++){const n=[];for(let j=0;j<p.length-1;j++){const a=p[j],b=p[j+1];
+    n.push(a,[(a[0]+b[0])/2+R(-disp,disp),(a[1]+b[1])/2+R(-disp,disp)*.5]);}n.push(p[p.length-1]);p=n;disp*=.55;}
+  return p;
+}
+function makeBolt(w,h,x0,list){
+  const x1=x0+R(-.25,.25)*w,y1=R(.45,1.02)*h,main=path(x0,-10,x1,y1,w*.09,7),segs=[{p:main,w:2.2}];
+  for(let i=0,k=2+(Math.random()*3|0);i<k;i++){const q=main[(R(.15,.8)*main.length)|0];
+    segs.push({p:path(q[0],q[1],q[0]+R(-.22,.22)*w,q[1]+R(.08,.3)*h,w*.045,6),w:1});}
+  list.push({segs,t:0,life:R(16,24)});
+}
+function drawBolts(ctx,list,scale){
+  for(let i=list.length-1;i>=0;i--){const b=list[i];b.t++;
+    const k=b.t/b.life,a=(k<.15?1:k<.3?.3:k<.45?.8:Math.max(0,1-k))*(.75+Math.random()*.25);
+    if(k>=1){list.splice(i,1);continue}
+    for(const s of b.segs){ctx.beginPath();s.p.forEach((q,j)=>j?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1]));
+      ctx.lineJoin='round';ctx.shadowColor='rgba(70,160,255,1)';
+      ctx.shadowBlur=26*D*scale;ctx.strokeStyle=`rgba(90,170,255,${a*.55})`;ctx.lineWidth=s.w*3.2*D*scale;ctx.stroke();
+      ctx.shadowBlur=9*D*scale;ctx.strokeStyle=`rgba(225,242,255,${a})`;ctx.lineWidth=s.w*D*scale;ctx.stroke();}
+    ctx.shadowBlur=0;}
+}
+let next=70,cnext=40,f=0;
+function strike(){
+  const x=R(.1,.9);makeBolt(W,H,x*W,bolts);
+  flash.style.setProperty('--fx',x*100+'%');
+  flash.animate([{opacity:.9},{opacity:.15},{opacity:.6},{opacity:0}],{duration:420,easing:'ease-out'});
+  card.style.setProperty('--glow','70px');card.style.setProperty('--ga','.8');
+  setTimeout(()=>{card.style.setProperty('--glow','34px');card.style.setProperty('--ga','.35')},260);
+}
+function frame(){
+  f++;sx.clearRect(0,0,W,H);
+  const L=150*D;
+  for(const n of nodes){n.x+=n.vx;n.y+=n.vy;if(n.x<0||n.x>W)n.vx*=-1;if(n.y<0||n.y>H)n.vy*=-1;}
+  sx.lineWidth=.7*D;
+  for(let i=0;i<nodes.length;i++){const a=nodes[i];
+    for(let j=i+1;j<nodes.length;j++){const b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=dx*dx+dy*dy;
+      if(d<L*L){sx.strokeStyle=`rgba(70,150,255,${(1-Math.sqrt(d)/L)*.34})`;sx.beginPath();sx.moveTo(a.x,a.y);sx.lineTo(b.x,b.y);sx.stroke();}}
+    const tw=.55+.45*Math.sin(f*.03+a.p);
+    sx.fillStyle=`rgba(120,200,255,${tw})`;sx.shadowColor='#3a9eff';sx.shadowBlur=10*D;
+    sx.beginPath();sx.arc(a.x,a.y,a.r,0,6.28);sx.fill();sx.shadowBlur=0;}
+  drawBolts(sx,bolts,1);
+  bx.clearRect(0,0,bc.width,bc.height);
+  drawBolts(bx,cbolts,.55);
+  if(!reduce){
+    if(--next<=0){strike();next=R(170,330)}
+    if(--cnext<=0){makeBolt(bc.width,bc.height,R(.4,.97)*bc.width,cbolts);cnext=R(60,130)}
+  }
+  requestAnimationFrame(frame);
+}
+function tilt(px,py){ // -1..1
+  card.style.setProperty('--ry',px*9+'deg');card.style.setProperty('--rx',-py*7+'deg');
+  card.style.setProperty('--gx',50+px*40+'%');card.style.setProperty('--gy',50+py*40+'%');
+}
+addEventListener('pointermove',e=>tilt(e.clientX/innerWidth*2-1,e.clientY/innerHeight*2-1),{passive:true});
+addEventListener('deviceorientation',e=>{if(e.gamma==null)return;
+  tilt(Math.max(-1,Math.min(1,e.gamma/28)),Math.max(-1,Math.min(1,(e.beta-45)/28)))},{passive:true});
+card.addEventListener('click',()=>{strike();makeBolt(bc.width,bc.height,R(.4,.97)*bc.width,cbolts)});
+addEventListener('resize',size);
+size();frame();
+})();
+</script>
+</body>
+</html>
