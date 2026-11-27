@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Grobler;Dennis;;;
+FN:Dennis Grobler
+ORG:Ionity (Pty) Ltd
+TITLE:Tech Manager
+TEL;TYPE=CELL,VOICE:+27662718449
+EMAIL;TYPE=WORK:dennis.g@ionity.today
+URL:https://www.ionity.co.za
+URL:https://ionity-global.github.io/ASSETS-IONITY-2026-/card/dennis/
+ADR;TYPE=WORK:;;;Pretoria;Gauteng;0001;South Africa
+END:VCARD

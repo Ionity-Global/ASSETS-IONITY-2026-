@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>William Njabulo Kodua · Ionity</title>
+<meta name="description" content="William Njabulo Kodua, Share Holder | Partner at Ionity. Building Tomorrow, Today.">
+<meta name="author" content="Johan Wilhelm van Antwerp">
+<meta name="theme-color" content="#030718">
+<meta property="og:title" content="William Njabulo Kodua · Ionity">
+<meta property="og:description" content="Share Holder | Partner. Building Tomorrow, Today.">
+<meta property="og:image" content="https://ionity-global.github.io/ASSETS-IONITY-2026-/card/william/card.jpg">
+<meta property="og:url" content="https://ionity-global.github.io/ASSETS-IONITY-2026-/card/william/">
+<meta property="og:type" content="profile">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="preload" as="image" href="card.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
+:root{--blue:#3a9eff;--cyan:#00c6ff;--ink:#030718}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:radial-gradient(110% 80% at 50% 38%,#0c1f78 0%,#07124a 34%,#040a26 68%,var(--ink) 100%);color:#fff;
+  font-family:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden;-webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color:transparent}
+#sky{position:fixed;inset:0;width:100%;height:100%;display:block;animation:fade 2.2s both}
+.vig{position:fixed;inset:0;pointer-events:none;background:radial-gradient(75% 65% at 50% 45%,transparent 55%,rgba(2,4,16,.75) 100%)}
+#flash{position:fixed;inset:0;background:radial-gradient(70% 55% at var(--fx,50%) 0%,rgba(140,200,255,.6),transparent 70%);
+  opacity:0;pointer-events:none;mix-blend-mode:screen}
+main{position:relative;z-index:2;height:100dvh;min-height:100%;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:clamp(16px,3.2vh,32px);padding:max(18px,env(safe-area-inset-top)) 18px max(14px,env(safe-area-inset-bottom))}
+.stage{perspective:1100px;width:min(92vw,740px,calc((100dvh - 350px)*1.79));min-width:260px;animation:float 7s ease-in-out 1.6s infinite}
+.card{position:relative;aspect-ratio:2752/1536;border-radius:clamp(10px,2.2vw,18px);padding:2px;
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transform-style:preserve-3d;
+  background:conic-gradient(from var(--a),#0a3cff,#00c6ff 12%,#eaf6ff 18%,#00c6ff 24%,#0a3cff 40%,#06208f 60%,#00c6ff 82%,#0a3cff);
+  box-shadow:0 22px 70px -14px rgba(0,60,255,.8),0 0 var(--glow,40px) rgba(0,150,255,var(--ga,.4));
+  animation:power 1.6s cubic-bezier(.2,.8,.2,1) both,spin 5s linear infinite;transition:box-shadow .25s;cursor:pointer}
+.face{position:relative;width:100%;height:100%;border-radius:inherit;overflow:hidden;background:#06103c}
+.face img{display:block;width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+#bolt{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:screen;pointer-events:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent 29%,#000 36%);mask-image:linear-gradient(90deg,transparent 29%,#000 36%)}
+.holo{position:absolute;inset:0;pointer-events:none;mix-blend-mode:color-dodge;opacity:.22;
+  background:linear-gradient(115deg,transparent 20%,#00e1ff 36%,#7a5cff 46%,#00ffc8 54%,transparent 70%);
+  background-size:260% 260%;background-position:var(--gx,50%) var(--gy,50%)}
+.glare{position:absolute;inset:-40%;pointer-events:none;mix-blend-mode:soft-light;
+  background:radial-gradient(34% 34% at var(--gx,50%) var(--gy,30%),rgba(255,255,255,.6),transparent 70%)}
+.hs{position:absolute;left:65.5%;width:30%;height:8%;border-radius:8px;z-index:3;transition:.2s}
+.hs:hover,.hs:focus-visible{background:rgba(0,198,255,.16);box-shadow:0 0 0 1px rgba(0,198,255,.7),0 0 22px rgba(0,198,255,.55);outline:none}
+.ai{display:flex;align-items:center;gap:10px;font:500 clamp(12px,1.9vh,14px)/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.06em;color:#9fd8ff;white-space:nowrap;min-height:1.2em;animation:rise .9s .65s both;margin-bottom:-6px}
+.ai .dot{width:8px;height:8px;border-radius:50%;background:#00ffc8;box-shadow:0 0 12px #00ffc8;animation:blink 1.6s infinite}
+.ai .tag{color:#fff;font-weight:700}
+.ai #ty::after{content:"▍";color:var(--cyan);animation:blink .9s steps(1) infinite}
+.ai button{all:unset;cursor:pointer;display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  box-shadow:0 0 0 1px rgba(0,198,255,.6);transition:.2s}
+.ai button:hover,.ai button:focus-visible,.ai button.on{background:rgba(0,198,255,.22);box-shadow:0 0 0 1px #00c6ff,0 0 16px rgba(0,198,255,.8)}
+.ai button svg{width:14px;height:14px;stroke:#bfe9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@keyframes blink{50%{opacity:.25}}
+.sweep{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 42%,rgba(170,220,255,.26) 50%,transparent 58%);
+  background-size:300% 100%;animation:sweep 6.5s ease-in-out infinite}
+.info{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 26px;font-weight:300;font-size:clamp(15px,2.3vh,18px);
+  letter-spacing:.02em;animation:rise .9s .8s both}
+.info a{color:#dcebff;text-decoration:none;display:inline-flex;align-items:center;gap:9px;padding:6px 2px;border-bottom:1px solid transparent;transition:.2s}
+.info a:hover,.info a:focus-visible{color:#fff;border-color:var(--cyan);outline:none;text-shadow:0 0 14px var(--cyan)}
+.info svg{width:19px;height:19px;stroke:var(--cyan);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none;filter:drop-shadow(0 0 5px var(--cyan))}
+.ctaw{position:relative;animation:rise .9s 1.05s both}
+.ring{position:absolute;inset:0;border-radius:999px;border:1px solid rgba(0,198,255,.7);animation:ring 2.8s ease-out infinite;pointer-events:none}
+.ring+.ring{animation-delay:1.4s}
+.cta{position:relative;display:inline-flex;align-items:center;gap:14px;padding:17px 44px 17px 48px;border-radius:999px;color:#fff;
+  text-decoration:none;font-weight:700;font-size:clamp(17px,2.6vh,21px);letter-spacing:.3em;text-transform:uppercase;
+  background:linear-gradient(135deg,#0a3cff 0%,#1f8fff 55%,#00c6ff 100%);
+  box-shadow:0 0 0 1px rgba(170,225,255,.6) inset,0 10px 40px -6px rgba(0,140,255,.9),0 0 70px -8px rgba(0,198,255,.9);
+  animation:breathe 2.8s 2s ease-in-out infinite;overflow:hidden;transition:transform .18s}
+.cta::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);
+  transform:translateX(-120%);animation:shine 3.4s 2.2s ease-in-out infinite}
+.cta:hover{transform:translateY(-2px) scale(1.04)}.cta:active{transform:scale(.97)}
+.cta:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.cta svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;position:relative;transition:transform .2s}
+.cta span{position:relative}.cta:hover svg{transform:translateX(5px)}
+.dest{font-size:12.5px;font-weight:300;letter-spacing:.22em;color:#8fb9ee;margin-top:-8px;animation:rise .9s 1.2s both}
+footer{font-size:11px;font-weight:300;letter-spacing:.06em;color:#7f9bc9;text-align:center;line-height:1.7;animation:rise .9s 1.35s both}
+footer b{display:block;font-weight:700;font-size:12.5px;letter-spacing:.24em;color:#fff;text-transform:uppercase}
+footer b i{font-style:normal;color:var(--blue);text-shadow:0 0 16px rgba(58,158,255,.9)}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes spin{to{--a:360deg}}
+@keyframes float{50%{transform:translateY(-9px)}}
+@keyframes shake{20%{translate:-3px 2px}40%{translate:3px -2px}60%{translate:-2px -1px}80%{translate:2px 1px}}
+@keyframes power{0%{opacity:0;scale:.9;filter:brightness(3.4) saturate(0)}16%{opacity:1;filter:brightness(2.4)}24%{opacity:.3}
+  32%{opacity:1;filter:brightness(1.7)}40%{opacity:.65}100%{opacity:1;scale:1;filter:none}}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes sweep{0%,55%{background-position:120% 0}100%{background-position:-60% 0}}
+@keyframes shine{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+@keyframes ring{from{transform:scale(1);opacity:.8}to{transform:scale(1.22,1.7);opacity:0}}
+@keyframes breathe{50%{box-shadow:0 0 0 1px rgba(210,240,255,.9) inset,0 12px 50px -4px rgba(0,150,255,1),0 0 100px -6px rgba(0,198,255,1)}}
+@media (max-height:640px){footer,.dest{display:none}}
+@media (max-height:520px){.ai{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="vig" aria-hidden="true"></div>
+<div id="flash" aria-hidden="true"></div>
+<main>
+  <div class="stage">
+    <div class="card" id="card">
+      <div class="face">
+        <img src="card.jpg" width="1376" height="768" alt="Ionity business card: William Njabulo Kodua, Share Holder | Partner, Pretoria, South Africa">
+        <canvas id="bolt" aria-hidden="true"></canvas>
+        <a class="hs" style="top:51%" href="tel:+27680513831" aria-label="Call +27 68 051 3831"></a>
+        <a class="hs" style="top:60.5%" href="mailto:node@ionity.co.za" aria-label="Email node@ionity.co.za"></a>
+        <a class="hs" style="top:71%" href="https://www.ionity.co.za" aria-label="ionity.co.za"></a>
+        <a class="hs" style="top:79%" href="https://www.ionity.today" aria-label="ionity.today"></a>
+        <div class="holo"></div><div class="sweep"></div><div class="glare"></div>
+      </div>
+    </div>
+  </div>
+  <div class="ai" aria-live="off"><i class="dot"></i><span class="tag">AEDI</span><span id="ty"></span>
+    <button id="say" type="button" aria-label="Play spoken introduction" title="Hear intro"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4zM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg></button></div>
+  <div class="info">
+    <a href="tel:+27680513831"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>+27 68 051 3831</a>
+    <a href="mailto:node@ionity.co.za"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>node@ionity.co.za</a>
+    <a href="contact.vcf" download="William-Njabulo-Kodua.vcf"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0M19 4v6M16 7h6"/></svg>Save contact</a>
+  </div>
+  <div class="ctaw"><i class="ring"></i><i class="ring"></i>
+    <a class="cta" id="cta" href="https://www.ionity.co.za"><span>Connect</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <div class="dest">IONITY.CO.ZA</div>
+  <footer><b>Building Tomorrow, <i>Today</i></b>&copy; 2018&ndash;2026 Antwerp Designs | Ionity (Pty) Ltd &middot; All rights reserved</footer>
+</main>
+<script>
+(()=>{
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const sky=document.getElementById('sky'),sx=sky.getContext('2d');
+const bc=document.getElementById('bolt'),bx=bc.getContext('2d');
+const card=document.getElementById('card'),flash=document.getElementById('flash');
+let W,H,D=Math.min(devicePixelRatio||1,2),bolts=[],cbolts=[],dust=[],rings=[],f=0,mx=0,my=0;
+const R=(a,b)=>a+Math.random()*(b-a);
+// glow sprite
+const spr=document.createElement('canvas');spr.width=spr.height=64;
+{const g=spr.getContext('2d'),gr=g.createRadialGradient(32,32,0,32,32,32);
+ gr.addColorStop(0,'rgba(235,248,255,1)');gr.addColorStop(.18,'rgba(110,200,255,.9)');gr.addColorStop(.5,'rgba(30,120,255,.28)');gr.addColorStop(1,'rgba(0,60,255,0)');
+ g.fillStyle=gr;g.fillRect(0,0,64,64);}
+// node globe
+const N=150,P=[],E=[],pk=[];
+for(let i=0;i<N;i++){const y=1-2*(i+.5)/N,r=Math.sqrt(1-y*y),t=i*2.399963;P.push([Math.cos(t)*r,y,Math.sin(t)*r,R(0,6.28)])}
+for(let i=0;i<N;i++){const d=P.map((q,j)=>[(q[0]-P[i][0])**2+(q[1]-P[i][1])**2+(q[2]-P[i][2])**2,j]).sort((a,b)=>a[0]-b[0]);
+  for(let k=1;k<=3;k++)if(d[k][1]>i||k==1)E.push([i,d[k][1]])}
+for(let i=0;i<26;i++)pk.push({e:(Math.random()*E.length)|0,t:Math.random(),v:R(.006,.016)});
+function size(){
+  W=sky.width=innerWidth*D;H=sky.height=innerHeight*D;
+  const r=bc.getBoundingClientRect();bc.width=r.width*D;bc.height=r.height*D;
+  dust=Array.from({length:Math.round(Math.min(70,innerWidth*innerHeight/16000))},()=>({x:R(0,W),y:R(0,H),v:R(.15,.6)*D,s:R(3,9)*D,p:R(0,6.28)}));
+}
+function path(x0,y0,x1,y1,disp,depth){
+  let p=[[x0,y0],[x1,y1]];
+  for(let i=0;i<depth;i++){const n=[];for(let j=0;j<p.length-1;j++){const a=p[j],b=p[j+1];
+    n.push(a,[(a[0]+b[0])/2+R(-disp,disp),(a[1]+b[1])/2+R(-disp,disp)*.5]);}n.push(p[p.length-1]);p=n;disp*=.55;}
+  return p;
+}
+function makeBolt(w,h,x0,list,x1,y1){
+  if(x1==null){x1=x0+R(-.25,.25)*w;y1=R(.45,1.02)*h}
+  const main=path(x0,-10,x1,y1,w*.08,7),segs=[{p:main,w:2.4}];
+  for(let i=0,k=2+(Math.random()*3|0);i<k;i++){const q=main[(R(.15,.8)*main.length)|0];
+    segs.push({p:path(q[0],q[1],q[0]+R(-.22,.22)*w,q[1]+R(.06,.24)*h,w*.04,6),w:1});}
+  list.push({segs,t:0,life:R(16,24)});
+}
+function drawBolts(ctx,list,scale){
+  for(let i=list.length-1;i>=0;i--){const b=list[i];b.t++;
+    const k=b.t/b.life,a=(k<.15?1:k<.3?.3:k<.45?.8:Math.max(0,1-k))*(.75+Math.random()*.25);
+    if(k>=1){list.splice(i,1);continue}
+    for(const s of b.segs){ctx.beginPath();s.p.forEach((q,j)=>j?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1]));
+      ctx.lineJoin='round';ctx.shadowColor='rgba(70,160,255,1)';
+      ctx.shadowBlur=28*D*scale;ctx.strokeStyle=`rgba(90,170,255,${a*.55})`;ctx.lineWidth=s.w*3.2*D*scale;ctx.stroke();
+      ctx.shadowBlur=9*D*scale;ctx.strokeStyle=`rgba(232,245,255,${a})`;ctx.lineWidth=s.w*D*scale;ctx.stroke();}
+    ctx.shadowBlur=0;}
+}
+function strike(){
+  const r=card.getBoundingClientRect(),tx=(r.left+R(.3,.95)*r.width)*D,ty=(r.top+2)*D;
+  makeBolt(W,H,tx+R(-.3,.3)*W,bolts,tx,ty);
+  rings.push({x:tx,y:ty,t:0});
+  makeBolt(bc.width,bc.height,tx-r.left*D,cbolts);
+  flash.style.setProperty('--fx',tx/W*100+'%');
+  flash.animate([{opacity:.95},{opacity:.15},{opacity:.6},{opacity:0}],{duration:440,easing:'ease-out'});
+  card.style.setProperty('--glow','90px');card.style.setProperty('--ga','.95');card.animate([{translate:'0 0'},{translate:'-3px 2px'},{translate:'3px -2px'},{translate:'-2px -1px'},{translate:'0 0'}],{duration:300});
+  setTimeout(()=>{card.style.setProperty('--glow','40px');card.style.setProperty('--ga','.4');},330);
+  if(navigator.vibrate)try{navigator.vibrate(18)}catch(e){}
+}
+let next=95,cnext=50;
+function frame(){
+  f++;sx.clearRect(0,0,W,H);
+  // globe
+  const cx=W/2+mx*18*D,cy=H*.44+my*12*D,rg=Math.max(W,H)*.52,ay=f*.0019,ax=.32+my*.08;
+  const ca=Math.cos(ay),sa=Math.sin(ay),cb=Math.cos(ax),sb=Math.sin(ax),Q=[];
+  for(const p of P){const x=p[0]*ca+p[2]*sa,z0=-p[0]*sa+p[2]*ca,y=p[1]*cb-z0*sb,z=p[1]*sb+z0*cb,s=1/(1.9-z*.9);
+    Q.push([cx+x*rg*s*1.05,cy+y*rg*s*1.05,z,s]);}
+  sx.lineWidth=.8*D;
+  for(const e of E){const a=Q[e[0]],b=Q[e[1]],al=(.5+.5*(a[2]+b[2])/2);
+    sx.strokeStyle=`rgba(60,140,255,${.05+al*al*.34})`;sx.beginPath();sx.moveTo(a[0],a[1]);sx.lineTo(b[0],b[1]);sx.stroke();}
+  sx.globalCompositeOperation='lighter';
+  for(let i=0;i<N;i++){const q=Q[i],al=.5+.5*q[2],tw=.6+.4*Math.sin(f*.04+P[i][3]),s=(6+16*al)*q[3]*D*1.5;
+    sx.globalAlpha=(.12+al*.8)*tw;sx.drawImage(spr,q[0]-s/2,q[1]-s/2,s,s);}
+  for(const k of pk){k.t+=k.v;if(k.t>1){k.t=0;k.e=(Math.random()*E.length)|0}
+    const a=Q[E[k.e][0]],b=Q[E[k.e][1]],x=a[0]+(b[0]-a[0])*k.t,y=a[1]+(b[1]-a[1])*k.t,al=.5+.5*(a[2]+b[2])/2,s=14*D*(.5+al);
+    sx.globalAlpha=.25+al*.75;sx.drawImage(spr,x-s/2,y-s/2,s,s);}
+  for(const d of dust){d.y-=d.v;d.x+=Math.sin(f*.01+d.p)*.25*D;if(d.y<-10){d.y=H+10;d.x=R(0,W)}
+    sx.globalAlpha=.22+.2*Math.sin(f*.03+d.p);sx.drawImage(spr,d.x,d.y,d.s,d.s);}
+  for(let i=rings.length-1;i>=0;i--){const r=rings[i];r.t++;const k=r.t/26;if(k>=1){rings.splice(i,1);continue}
+    sx.globalAlpha=(1-k)*.9;sx.strokeStyle='#bfe4ff';sx.lineWidth=2*D*(1-k);sx.beginPath();sx.ellipse(r.x,r.y,k*150*D,k*46*D,0,0,6.28);sx.stroke();
+    const s=(1-k)*120*D;sx.drawImage(spr,r.x-s/2,r.y-s/2,s,s);}
+  sx.globalAlpha=1;
+  drawBolts(sx,bolts,1);
+  sx.globalCompositeOperation='source-over';
+  bx.clearRect(0,0,bc.width,bc.height);drawBolts(bx,cbolts,.55);
+  if(!reduce){
+    if(--next<=0){strike();next=R(190,340)}
+    if(--cnext<=0){makeBolt(bc.width,bc.height,R(.4,.97)*bc.width,cbolts);cnext=R(70,140)}
+  }
+  requestAnimationFrame(frame);
+}
+function tilt(px,py){mx=px;my=py;
+  card.style.setProperty('--ry',px*10+'deg');card.style.setProperty('--rx',-py*8+'deg');
+  card.style.setProperty('--gx',50+px*40+'%');card.style.setProperty('--gy',50+py*40+'%');
+}
+addEventListener('pointermove',e=>tilt(e.clientX/innerWidth*2-1,e.clientY/innerHeight*2-1),{passive:true});
+addEventListener('deviceorientation',e=>{if(e.gamma==null)return;
+  tilt(Math.max(-1,Math.min(1,e.gamma/28)),Math.max(-1,Math.min(1,(e.beta-45)/28)))},{passive:true});
+card.addEventListener('click',e=>{if(!e.target.closest('.hs'))strike()});
+// AEDI status line (typewriter) + spoken intro (browser speech synthesis, on device)
+const lines=["link established", "William @ Ionity", "True Edge AI · IoT · Cloud", "DaQ · PdM · CMMS", "hardware ⇄ software, bridged", "tap the card for lightning"],ty=document.getElementById('ty');let li=0,ci=0,dir=1,hold=0;
+function type(){const s=lines[li];
+  if(hold>0){hold--}else{ci+=dir;ty.textContent=' › '+s.slice(0,ci);
+    if(dir>0&&ci>=s.length){dir=-1;hold=38}else if(dir<0&&ci<=0){dir=1;li=(li+1)%lines.length;hold=6}}
+  setTimeout(type,dir>0?46:18)}
+if(reduce)ty.textContent=' › '+lines[0];else setTimeout(type,1500);
+const say=document.getElementById('say');
+if(!('speechSynthesis' in window))say.hidden=true;
+say.addEventListener('click',()=>{const ss=speechSynthesis;if(ss.speaking){ss.cancel();say.classList.remove('on');return}
+  const u=new SpeechSynthesisUtterance("This is the digital business card of William Njabulo Kodua, Share Holder  and  Partner, at Ionity. Tap connect to visit ionity dot co dot z a. Building tomorrow, today.");u.rate=1;u.pitch=1;u.lang='en-ZA';
+  u.onend=u.onerror=()=>say.classList.remove('on');say.classList.add('on');ss.speak(u);strike()});
+addEventListener('resize',size);
+size();frame();
+})();
+</script>
+</body>
+</html>
